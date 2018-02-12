@@ -16,13 +16,11 @@
         <div class="col-md-4">
             <h4>
                 Paid: $
-                <span id="total"></span>
-                <br/><br/>
-                <button class="btn btn-primary"
-                    onclick="machine.acceptCoin(new Coin())">
-                    Insert coin
-                </button>
+                <span id="total" data-bind="text: paid"></span>
             </h4>
+            <div data-bind="foreach: acceptedCoins">
+                    <img data-bind="attr: { src: getImageUrl(), alt: value }, click: $parent.acceptCoin"/>
+            </div>
         </div>
     </div>
     <script src="js/lib/knockout-3.4.2.js"></script>

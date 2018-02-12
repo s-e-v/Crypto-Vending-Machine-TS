@@ -7,7 +7,7 @@ class Coin {
         this.value = newValue;
     }
     getImageUrl(): string {
-        return "img/coin.png";
+        return "assets/coin.png";
     }
 }
 
