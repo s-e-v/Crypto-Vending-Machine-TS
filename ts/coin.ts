@@ -1,15 +1,42 @@
-class Coin {
-    private value: number = .25;
-    get Value() {
-        return this.value;
+abstract class Coin {
+    constructor(public value: number) {
+        this.value = value;
     }
-    set Value(newValue: number) {
-        this.value = newValue;
+    abstract getImageUrl(): string;
+}
+
+class BitCoin extends Coin {
+    constructor() {
+        super(.25);
     }
     getImageUrl(): string {
-        return "assets/coin.png";
+        return "assets/bitcoin.png";
     }
 }
 
-const coin = new Coin();
-const value = coin.Value;
+class DogeCoin extends Coin {
+    constructor() {
+        super(.25);
+    }
+    getImageUrl(): string {
+        return "assets/dogecoin.png";
+    }
+}
+
+class Ether extends Coin {
+    constructor() {
+        super(.25);
+    }
+    getImageUrl(): string {
+        return "assets/ether.png";
+    }
+}
+
+class LiteCoin extends Coin {
+    constructor() {
+        super(.25);
+    }
+    getImageUrl(): string {
+        return "assets/litecoin.png";
+    }
+}

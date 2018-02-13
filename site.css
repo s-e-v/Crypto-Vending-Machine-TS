@@ -29,19 +29,18 @@ body {
 
 .selected .image {
     animation-name: rotate;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }
 
 .sold .image {
     animation-name: drop;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 @keyframes rotate {
-    33% { transform: rotate(-15deg); }
-    66% { transform: rotate(15deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @keyframes drop {
-    99% { transform: translateY(600px) rotate(120deg); }
+    100% { transform: translateY(800px) rotate(60deg); }
 }
