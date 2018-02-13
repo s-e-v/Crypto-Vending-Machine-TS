@@ -7,36 +7,36 @@ abstract class Coin {
 
 class BitCoin extends Coin {
     constructor() {
-        super(.25);
+        super(1);
     }
     getImageUrl(): string {
-        return "assets/bitcoin.png";
+        return "assets/bitcoin.gif";
     }
 }
 
 class DogeCoin extends Coin {
     constructor() {
-        super(.25);
+        super(.00000058);
     }
     getImageUrl(): string {
-        return "assets/dogecoin.png";
+        return "assets/dogecoin.gif";
     }
 }
 
 class Ether extends Coin {
     constructor() {
-        super(.25);
+        super(0.09903249);
     }
     getImageUrl(): string {
-        return "assets/ether.png";
+        return "assets/ether.gif";
     }
 }
 
 class LiteCoin extends Coin {
     constructor() {
-        super(.25);
+        super(0.0182);
     }
     getImageUrl(): string {
-        return "assets/litecoin.png";
+        return "assets/litecoin.gif";
     }
 }
