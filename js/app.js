@@ -9,27 +9,17 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Coin = /** @class */ (function () {
-    function Coin() {
+    function Coin(value) {
+        this.value = value;
+        this.value = value;
     }
     return Coin;
 }());
 var BitCoin = /** @class */ (function (_super) {
     __extends(BitCoin, _super);
     function BitCoin() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.value = .25;
-        return _this;
+        return _super.call(this, .25) || this;
     }
-    Object.defineProperty(BitCoin.prototype, "Value", {
-        get: function () {
-            return this.value;
-        },
-        set: function (newValue) {
-            this.value = newValue;
-        },
-        enumerable: true,
-        configurable: true
-    });
     BitCoin.prototype.getImageUrl = function () {
         return "assets/bitcoin.png";
     };
@@ -38,20 +28,8 @@ var BitCoin = /** @class */ (function (_super) {
 var DogeCoin = /** @class */ (function (_super) {
     __extends(DogeCoin, _super);
     function DogeCoin() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.value = .25;
-        return _this;
+        return _super.call(this, .25) || this;
     }
-    Object.defineProperty(DogeCoin.prototype, "Value", {
-        get: function () {
-            return this.value;
-        },
-        set: function (newValue) {
-            this.value = newValue;
-        },
-        enumerable: true,
-        configurable: true
-    });
     DogeCoin.prototype.getImageUrl = function () {
         return "assets/dogecoin.png";
     };
@@ -60,20 +38,8 @@ var DogeCoin = /** @class */ (function (_super) {
 var Ether = /** @class */ (function (_super) {
     __extends(Ether, _super);
     function Ether() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.value = .25;
-        return _this;
+        return _super.call(this, .25) || this;
     }
-    Object.defineProperty(Ether.prototype, "Value", {
-        get: function () {
-            return this.value;
-        },
-        set: function (newValue) {
-            this.value = newValue;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Ether.prototype.getImageUrl = function () {
         return "assets/ether.png";
     };
@@ -82,20 +48,8 @@ var Ether = /** @class */ (function (_super) {
 var LiteCoin = /** @class */ (function (_super) {
     __extends(LiteCoin, _super);
     function LiteCoin() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.value = .25;
-        return _this;
+        return _super.call(this, .25) || this;
     }
-    Object.defineProperty(LiteCoin.prototype, "Value", {
-        get: function () {
-            return this.value;
-        },
-        set: function (newValue) {
-            this.value = newValue;
-        },
-        enumerable: true,
-        configurable: true
-    });
     LiteCoin.prototype.getImageUrl = function () {
         return "assets/litecoin.png";
     };
@@ -159,7 +113,7 @@ var VendingMachine = /** @class */ (function () {
         };
         this.acceptCoin = function (coin) {
             var oldTotal = _this.paid();
-            _this.paid(oldTotal + coin.Value);
+            _this.paid(oldTotal + coin.value);
         };
         this.pay = function () {
             if (_this.selectedCell().stock() < 1) {

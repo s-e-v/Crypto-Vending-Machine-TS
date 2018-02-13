@@ -39,7 +39,7 @@ class VendingMachine {
 
     acceptCoin = (coin: Coin): void => {
         let oldTotal = this.paid();
-        this.paid(oldTotal + coin.Value);
+        this.paid(oldTotal + coin.value);
     }
 
     pay = (): void => {
