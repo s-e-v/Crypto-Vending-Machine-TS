@@ -12,12 +12,13 @@ body {
 }
 
 .cell {
-    height: 110px;
+    height: 150px;
     margin-bottom: 40px;
 }
 
 .cell:hover {
-    outline: 1px solid red;
+    outline: 4px solid rgb(0, 82, 235);
+    background-color: rgba(63, 145, 252, 0.144)
 }
 
 .productInfo {
